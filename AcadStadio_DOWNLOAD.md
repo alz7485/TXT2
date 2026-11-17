@@ -1,13 +1,13 @@
-# AcadStadio 最新改良版
+# AcadStadio 1.72.3-beta108 統合版
 
-[ZIPをダウンロード](https://github.com/alz7485/TXT2/raw/refs/heads/main/downloads/AcadStadio_v1.72.2_SafeExclude.zip)
+[最新ZIPをダウンロード](https://github.com/alz7485/TXT2/raw/refs/heads/main/downloads/AcadStadio_v1.72.3_MergedTrial108.zip)
 
-− 選択から除外で図形をクリックすると、端点・中点・補間点・円周上の候補から他図形と重ならない点を探し、元図形の点参照として保存します。元図形の移動に追従します。安全な候補がない場合は確定しません。変更後のコンパイルとSCR実行でも、異なる図形種類を含めた曖昧さを検査します。
+[統合内容の詳細](downloads/AcadStadio_MERGE_Trial108.md)
 
-新規除外はプレビューの個別クリックによる点参照方式。旧版の数値条件は互換保持するため、点参照にするには古い−条件を削除して除外し直してください。
+添付のPointAxisFlowTrial108から、点参照確定後のX→同じ点Y→次点XY、XY→次点XYのフロー修正を取り込みました。SELECTの＋／−選択、安全な点参照除外、最大最小XY点参照、作成制限・削除処理、ドロップ対策とQtビルド設定を保持。Treeviewの単位付きindentも標準変換で処理します。
 
-コア522件・スモーク成功。GUI実操作・Windows/AutoCAD実機は未実施。実CADにだけある図形はSCR側の検査となります。Pythonソース版。解凍後requirements.txtをインストールしてpython src/main.pyで起動。
+コア522件、実Tk/Xorgの関連GUI37件、スモーク成功。全GUI一括・Windows/AutoCAD実機・SCR実行・EXEビルドは未実施。
 
-以前の最大最小XY点参照・Qtビルド設定・ドロップ対策も含みます。
+Pythonソース版。解凍してrequirements.txtをインストールし、python src/main.pyで起動。Windows用ビルドは同梱EXE_BUILD_ONEDIR.mdを参照してください。
 
-SHA256: 045c2b0039a4f78591418ee5319627fe0bb6e6d0887d90c29554612c8c75cd79
+SHA256: 2dc185dfe1da6c652eb2bf0fefc1589f4e811c7b37a45ce33b95720de7dcfe29
