@@ -1,13 +1,13 @@
-# AcadStadio 最新修正版
+# AcadStadio 最新改良版
 
-[ZIPをダウンロード](https://github.com/alz7485/TXT2/raw/refs/heads/main/downloads/AcadStadio_v1.72.2_BuildFix.zip)
+[ZIPをダウンロード](https://github.com/alz7485/TXT2/raw/refs/heads/main/downloads/AcadStadio_v1.72.2_SelectSubtract.zip)
 
-[ビルド設定のみ](https://github.com/alz7485/TXT2/raw/refs/heads/main/downloads/AcadStadio.spec)
+プレビューで＋選択／−除外してから「選択図形の最大・最小XYを点参照にする」を実行。最終選択の最小最大X/Yを表示し、各図形の外接範囲への点参照式で窓を作ります。元図形の移動や半径変更にも範囲が追従。除外条件は保存・SCR出力に反映します。
 
-PyInstallerでPySide6/PyQt5が競合するエラーに対応。Tkinterアプリに不要なQtバインディング6種をspecで除外。共有環境のQtを削除する必要はありません。
+点クリックの除外位置は数値座標のため、図形移動後は除外位置も確認してください。囲む窓の内側の別図形は除外指定で調整します。
 
-置換後 python -m PyInstaller --clean --noconfirm AcadStadio.spec で再ビルド。
+コア518件・スモーク成功。GUI実操作・Windows/AutoCAD実機は今回未確認。Pythonソース版。解凍後requirements.txtをインストールしてpython src/main.pyで起動。
 
-spec構文・除外指定・同梱データパスを検証。WindowsでのEXEビルドは未確認。前版のドロップ対策・SELECT改良も含みます。
+前版のQtビルド修正・ドロップ対策・SELECTの作成制限と削除処理も含みます。
 
-SHA256: 1e079c8dd9d132fec5eede0ffb951073a096459e6a93e284999ba45123a621c6
+SHA256: 231c55883fcbe961d7ea562845d77fea34048161fd6364cbe6c429b796733a36
