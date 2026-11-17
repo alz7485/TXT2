@@ -1,13 +1,13 @@
 # AcadStadio 最新改良版
 
-[ZIPをダウンロード](https://github.com/alz7485/TXT2/raw/refs/heads/main/downloads/AcadStadio_v1.72.2_SelectSubtract.zip)
+[ZIPをダウンロード](https://github.com/alz7485/TXT2/raw/refs/heads/main/downloads/AcadStadio_v1.72.2_SafeExclude.zip)
 
-プレビューで＋選択／−除外してから「選択図形の最大・最小XYを点参照にする」を実行。最終選択の最小最大X/Yを表示し、各図形の外接範囲への点参照式で窓を作ります。元図形の移動や半径変更にも範囲が追従。除外条件は保存・SCR出力に反映します。
+− 選択から除外で図形をクリックすると、端点・中点・補間点・円周上の候補から他図形と重ならない点を探し、元図形の点参照として保存します。元図形の移動に追従します。安全な候補がない場合は確定しません。変更後のコンパイルとSCR実行でも、異なる図形種類を含めた曖昧さを検査します。
 
-点クリックの除外位置は数値座標のため、図形移動後は除外位置も確認してください。囲む窓の内側の別図形は除外指定で調整します。
+新規除外はプレビューの個別クリックによる点参照方式。旧版の数値条件は互換保持するため、点参照にするには古い−条件を削除して除外し直してください。
 
-コア518件・スモーク成功。GUI実操作・Windows/AutoCAD実機は今回未確認。Pythonソース版。解凍後requirements.txtをインストールしてpython src/main.pyで起動。
+コア522件・スモーク成功。GUI実操作・Windows/AutoCAD実機は未実施。実CADにだけある図形はSCR側の検査となります。Pythonソース版。解凍後requirements.txtをインストールしてpython src/main.pyで起動。
 
-前版のQtビルド修正・ドロップ対策・SELECTの作成制限と削除処理も含みます。
+以前の最大最小XY点参照・Qtビルド設定・ドロップ対策も含みます。
 
-SHA256: 231c55883fcbe961d7ea562845d77fea34048161fd6364cbe6c429b796733a36
+SHA256: 045c2b0039a4f78591418ee5319627fe0bb6e6d0887d90c29554612c8c75cd79
